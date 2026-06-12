@@ -45,9 +45,6 @@ def show_login():
             <div class="auth-header-center">
               <div class="auth-hero-badge"><span class="auth-hero-dot"></span>PRAVAHA Analytics Command Center</div>
               <div class="auth-brand-line">PRAVAHA<span>Market Intelligence Platform</span></div>
-              <div class="auth-hero-copy">
-                Analyze market structure, trace causal relationships, and translate signals into decisions with a clean workspace built for modern research teams.
-              </div>
             </div>
           </div>
         </div>
@@ -60,10 +57,10 @@ def show_login():
 
     with col1:
         features = [
-            ("Signals", "Lead-Lag Discovery", "Spot timing shifts across instruments and regimes."),
-            ("Causal", "Causal Intelligence", "Trace relationships beyond simple correlation."),
-            ("Forecast", "Forecast Lab", "Test models with transparent, explainable outputs."),
-            ("Network", "Dependency Maps", "See how assets, sectors, and drivers connect."),
+            ("Signals", "Lead-Lag Discovery", "Spot timing shifts."),
+            ("Causal", "Causal Intelligence", "Trace relationships."),
+            ("Forecast", "Forecast Lab", "Test model outputs."),
+            ("Network", "Dependency Maps", "See market links."),
         ]
 
         features_html = "".join(
@@ -88,16 +85,16 @@ def show_login():
                     </div>
                 </div>
                 <div class="auth-intro">
-                    A premium workspace for analysts who need a sharper landing point, faster context, and a more focused route into market research.
+                    A compact workspace for analysts who need quick access to signals, models, and market structure.
                 </div>
                 <div class="auth-mini-list">
                     <div class="auth-mini-item">
                         <div class="auth-mini-icon">01</div>
-                        <div><strong>Decision-ready views</strong><span>See what moved, why it moved, and what to watch next.</span></div>
+                        <div><strong>Decision-ready</strong><span>See what moved and what to watch next.</span></div>
                     </div>
                     <div class="auth-mini-item">
                         <div class="auth-mini-icon">02</div>
-                        <div><strong>Built for analysts</strong><span>Keep signal context, model outputs, and portfolio impact aligned.</span></div>
+                        <div><strong>Built for analysts</strong><span>Keep signal context and model output aligned.</span></div>
                     </div>
                 </div>
                 <div class="auth-feature-grid">

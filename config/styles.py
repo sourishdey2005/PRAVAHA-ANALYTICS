@@ -940,7 +940,7 @@ AUTH_CSS = """
     }
 
     .auth-header-center {
-        margin-top: 40x !important;
+        margin-top: 20px !important;
         margin-bottom: 22px !important;
     }
 
@@ -1210,35 +1210,23 @@ AUTH_CSS = """
 
 AUTH_CSS = """
 <style>
+[data-testid="stAppViewContainer"] {
+    background-color: #07101d !important;
+}
+
 .auth-shell {
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.18), transparent 26%),
-        radial-gradient(circle at 82% 12%, rgba(217, 119, 6, 0.12), transparent 22%),
-        radial-gradient(circle at 76% 82%, rgba(16, 185, 129, 0.10), transparent 24%),
-        linear-gradient(135deg, #07101d 0%, #0a1527 42%, #050b14 100%);
+    background: #07101d;
 }
 
 .auth-shell::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 54px 54px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), transparent 92%);
-    pointer-events: none;
+    content: none;
 }
 
 .auth-shell::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.05), transparent 35%);
-    pointer-events: none;
+    content: none;
 }
 
 .auth-page {
@@ -1262,17 +1250,17 @@ section.main {
 .block-container {
     max-width: 1240px !important;
     margin: 0 auto !important;
-    padding: 14px 18px 16px !important;
+    padding: 8px 18px 10px !important;
     min-height: 100vh !important;
 }
 
 .auth-header-center {
     display: grid;
     justify-items: center;
-    gap: 10px;
+    gap: 0px;
     text-align: center;
     max-width: 880px;
-    margin: 8px auto 12px;
+    margin: 0 auto 4px;
 }
 
 .auth-hero-badge {
@@ -1308,7 +1296,7 @@ section.main {
 
 .auth-brand-line span {
     display: block;
-    margin-top: 6px;
+    margin-top: 0;
     color: #8ea0b8;
     font-size: 0.28em;
     font-weight: 700;
@@ -1319,14 +1307,14 @@ section.main {
 .auth-hero-copy {
     max-width: 760px;
     color: #cbd5e1;
-    font-size: 1rem;
-    line-height: 1.45;
+    font-size: 0.95rem;
+    line-height: 1.2;
 }
 
 .auth-landing-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-    gap: 12px;
+    gap: 8px;
     align-items: start;
 }
 
@@ -1335,14 +1323,14 @@ section.main {
     position: relative;
     overflow: hidden;
     border-radius: 28px;
-    border: 1px solid rgba(148, 163, 184, 0.12);
-    background: rgba(9, 16, 30, 0.58);
+    border: 1px solid rgba(148, 163, 184, 0.08);
+    background: rgba(9, 16, 30, 0.70);
     backdrop-filter: blur(24px);
-    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
 
 .auth-left-panel {
-    padding: 28px;
+    padding: 18px;
 }
 
 .auth-left-panel::before,
@@ -1358,7 +1346,7 @@ section.main {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
 }
 
 .auth-logo-icon {
@@ -1391,32 +1379,32 @@ section.main {
 
 .auth-left-panel .auth-intro {
     color: #d7e2f2;
-    font-size: 1.08rem;
-    line-height: 1.7;
-    margin-bottom: 22px;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    margin-bottom: 12px;
 }
 
 .auth-mini-list {
     display: grid;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 .auth-mini-item {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     align-items: flex-start;
-    padding: 14px 14px;
-    border-radius: 20px;
+    padding: 10px 12px;
+    border-radius: 16px;
     border: 1px solid rgba(148, 163, 184, 0.10);
     background: rgba(15, 23, 42, 0.42);
 }
 
 .auth-mini-icon {
-    width: 38px;
-    height: 38px;
-    flex: 0 0 38px;
-    border-radius: 14px;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    border-radius: 12px;
     display: grid;
     place-items: center;
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.24), rgba(124, 58, 237, 0.22));
@@ -1428,27 +1416,27 @@ section.main {
 .auth-feature strong {
     display: block;
     color: #f8fafc;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 4px;
 }
 
 .auth-mini-item span,
 .auth-feature span {
     color: #94a3b8;
-    font-size: 0.84rem;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    line-height: 1.35;
 }
 
 .auth-feature-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 .auth-feature {
-    padding: 14px;
-    border-radius: 20px;
+    padding: 10px 12px;
+    border-radius: 16px;
     border: 1px solid rgba(148, 163, 184, 0.10);
     background: rgba(15, 23, 42, 0.38);
     transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
@@ -1462,8 +1450,8 @@ section.main {
 }
 
 .auth-side-panel {
-    padding: 16px;
-    border-radius: 22px;
+    padding: 12px;
+    border-radius: 18px;
     border: 1px solid rgba(148, 163, 184, 0.10);
     background: rgba(15, 23, 42, 0.34);
 }
@@ -1474,26 +1462,26 @@ section.main {
     font-size: 0.74rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .auth-metric-row {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
 }
 
 .auth-metric {
     text-align: center;
-    padding: 14px 10px;
-    border-radius: 18px;
+    padding: 10px 8px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(148, 163, 184, 0.10);
 }
 
 .auth-metric b {
     display: block;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     font-weight: 900;
     color: #ffffff;
     margin-bottom: 4px;
@@ -1504,11 +1492,11 @@ section.main {
 
 .auth-metric span {
     color: #94a3b8;
-    font-size: 0.76rem;
+    font-size: 0.7rem;
 }
 
 .auth-card {
-    padding: 28px;
+    padding: 18px;
 }
 
 .auth-card::before {
@@ -1521,11 +1509,11 @@ section.main {
     justify-content: space-between;
     align-items: flex-start;
     gap: 18px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .auth-card-title {
-    font-size: 1.55rem;
+    font-size: 1.3rem;
     font-weight: 900;
     color: #ffffff;
     letter-spacing: -0.04em;
@@ -1534,8 +1522,8 @@ section.main {
 .auth-card-subtitle {
     margin-top: 6px;
     color: #93a4ba;
-    font-size: 0.92rem;
-    line-height: 1.55;
+    font-size: 0.84rem;
+    line-height: 1.35;
 }
 
 .auth-status-pill {
@@ -1563,24 +1551,24 @@ section.main {
 
 .auth-form-note {
     color: #93a4ba;
-    font-size: 0.84rem;
-    line-height: 1.5;
-    margin: 0 0 14px;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    margin: 0 0 8px;
 }
 
 .auth-form-shell {
     display: grid;
-    gap: 10px;
+    gap: 6px;
 }
 
 .auth-card .stTabs {
-    margin-top: 14px;
+    margin-top: 8px;
 }
 
 .auth-card .stTabs [data-baseweb="tab-list"] {
-    gap: 8px;
+    gap: 6px;
     background: rgba(15, 23, 42, 0.32);
-    padding: 6px;
+    padding: 4px;
     border-radius: 999px;
     border: 1px solid rgba(148, 163, 184, 0.10);
 }
@@ -1600,7 +1588,7 @@ section.main {
 .auth-card .stTextInput,
 .auth-card .stCheckbox,
 .auth-card .stButton {
-    margin-top: 2px;
+    margin-top: 0;
 }
 
 .auth-card .stTextInput label,
@@ -1610,7 +1598,7 @@ section.main {
 }
 
 .auth-card .stTextInput input {
-    border-radius: 16px !important;
+    border-radius: 12px !important;
     background: rgba(15, 23, 42, 0.75) !important;
     border: 1px solid rgba(148, 163, 184, 0.16) !important;
     color: #f8fafc !important;
@@ -1622,7 +1610,7 @@ section.main {
 }
 
 .auth-card .stButton button {
-    border-radius: 16px !important;
+    border-radius: 12px !important;
     font-weight: 800 !important;
     background: linear-gradient(135deg, #0ea5e9, #2563eb) !important;
     border: 0 !important;
@@ -1635,9 +1623,9 @@ section.main {
 }
 
 .auth-demo {
-    margin-top: 18px;
-    padding: 14px 16px;
-    border-radius: 18px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
     border: 1px solid rgba(34, 197, 94, 0.16);
     background: rgba(34, 197, 94, 0.06);
     color: #d1fae5;
@@ -1670,13 +1658,13 @@ section.main {
 
 @media (max-width: 640px) {
     .block-container {
-        padding: 10px 14px 12px !important;
+        padding: 8px 12px 10px !important;
     }
 
     .auth-left-panel,
     .auth-card {
-        padding: 20px;
-        border-radius: 22px;
+        padding: 14px;
+        border-radius: 18px;
     }
 
     .auth-logo-text {
